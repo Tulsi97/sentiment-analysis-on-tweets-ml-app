@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			SENTIMENT-ANALYSIS-ML-APP(On Tweets)
+		</div>
+		<h2> Twitter Sentiment Analysis </h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:30;text-align: center;"><b>Result of Tweets</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">Positive</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">Negative</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
+
